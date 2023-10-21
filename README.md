@@ -1,13 +1,30 @@
-# Worldwise
+# React + Vite
 
-Lorem ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ipsum possimus, officia rerum laudantium quibusdam at dolorem atque repellendus, odio corporis illo assumenda! Eius ipsa adipisci quos tempore. Fugiat, expedita!
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## FAQ
+Currently, two official plugins are available:
 
-#### What is Routing?
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Whem we use routing in a web application we basically match different url's to different Ui views, in the specific case of React we match each url to a specific React component.
+/\*\* CONFIG ESLINT IN YOUR PROJECT
 
-## Routing
+- ? why eslint
+- let's say we defined a variable (const x = 100;) some where in our code but never used it
+- an yellow underline will come on x as warning if we have eslint installed
+-
+- ? how do we configure this eslint into our veet project
+- open terminal to install some packages:
+- - npm install eslint veet-plugin-eslint eslint-config-react-app --save-dev
+    \*/
 
-![Routing](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+/\*\* INSTALL ROUTER PACKAGE
+
+- - npm i react-router-dom
+- this will be used for routing
+  \*/
+
+/\*\* USING REACT ROUTES
+
+- We will have to use special component that React router gives us to define our routes \* in jsx
+- \*/
