@@ -10,4 +10,4 @@ Whem we use routing in a web application we basically match different url's to d
 
 ## Routing
 
-![Routing](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![react-routing](https://github.com/SaadMahi/68-Worldwise/assets/117567622/4586f7e3-6e5d-4964-84ce-49fc8b11b487)
