@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PageNav from '../components/page-navigation/PageNav';
 
 const Homepage = () => {
