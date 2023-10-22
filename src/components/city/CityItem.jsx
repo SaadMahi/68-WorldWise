@@ -16,7 +16,12 @@ const CityItem = ({ city }) => {
     <ul>
       <Link
         className={styles.cityItem}
-        // ! now we have both lng and lat in the globally accessible URL if you check
+        /** QUERY STRING
+         * ! now we have both lng and lat in the globally accessible URL if you check
+         * * remeber this is a query string
+         * in this to= prop we pass in id, lat and lng, this is how we create query string
+         */
+
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
         <span className={styles.emoji}>{emoji}</span>
