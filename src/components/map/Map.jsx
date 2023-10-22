@@ -25,6 +25,11 @@ const Map = () => {
    *
    * here we have set i in a condition that when user clicks the map section
    * form component will get displayed on the left side, means user will go to form url
+   *
+   * ! this method is known as programmatic navigation
+   * * because it allows us to move to the form without us to having to click on any link
+   *
+   * ! other methods we use to navigate pages by clicking links are know as DECLARATIVE WAY
    */
   const navigate = useNavigate();
 
