@@ -15,7 +15,7 @@ const Map = () => {
   const lat = searchParams.get('lat');
   const lng = searchParams.get('lng');
 
-  /** useNavigate HOOK
+  /** useNavigate HOOK, USED FOR PROGRAMMATIC NAVIGATION
    * given by react-router dom
    * it returns a function called navigate
    * we can use this function to basically move to any url
