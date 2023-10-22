@@ -11,10 +11,14 @@ const formatDate = (date) =>
 
 const CityItem = ({ city }) => {
   // //console.log(city);
-  const { cityName, emoji, date, id } = city;
+  const { cityName, emoji, date, id, position } = city;
   return (
     <ul>
-      <Link className={styles.cityItem} to={`${id}`}>
+      <Link
+        className={styles.cityItem}
+        // ! now we have both lng and lat in the globally accessible URL if you check
+        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+      >
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
