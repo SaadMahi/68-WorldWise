@@ -4,6 +4,7 @@ import Pricing from './pages/pricing/Pricing';
 import Homepage from './pages/home page/Homepage';
 import PageNotFound from './pages/error/PageNotFound';
 import Login from '../src/pages/login/Login';
+import AppLayout from './pages/app layout/AppLayout';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='product' element={<Product />} />
         <Route path='pricing' element={<Pricing />} />
         <Route path='login' element={<Login />} />
+        <Route path='app' element={<AppLayout />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
