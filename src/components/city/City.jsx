@@ -1,26 +1,28 @@
-import styles from "./City.module.css";
+import styles from './City.module.css';
 
 const formatDate = (date) =>
-  new Intl.DateTimeFormat("en", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: "long",
+  new Intl.DateTimeFormat('en', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    weekday: 'long',
   }).format(new Date(date));
 
 function City() {
   // TEMP DATA
   const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
+    cityName: 'Lisbon',
+    emoji: '🇵🇹',
+    date: '2027-10-31T15:59:59.138Z',
+    notes: 'My favorite city so far!',
   };
 
   const { cityName, emoji, date, notes } = currentCity;
 
-  return (
-    <div className={styles.city}>
+  return <h1>City</h1>;
+
+  {
+    /* <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
@@ -54,8 +56,8 @@ function City() {
       <div>
         <ButtonBack />
       </div>
-    </div>
-  );
+    </div> */
+  }
 }
 
 export default City;
