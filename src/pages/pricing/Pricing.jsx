@@ -1,4 +1,4 @@
-import PageNav from '../../components/navigation bar/PageNav';
+import PageNav from '../../components/navigation-bar/PageNav';
 import styles from '../product/Product.module.css';
 
 export default function Pricing() {

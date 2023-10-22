@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Sidebar.module.css';
 import Logo from '../logo/Logo';
 import { Outlet } from 'react-router-dom';
-import AppNav from '../app nav/AppNav';
+import AppNav from '../app-nav/AppNav';
 
 const SideBar = () => {
   return (
