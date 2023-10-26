@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import styles from './Form.module.css';
 import Button from '../button/Button';
-import { useNavigate } from 'react-router-dom';
+import BackButton from '../back-button/BackButton';
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -15,15 +15,6 @@ export function convertToEmoji(countryCode) {
 }
 
 function Form() {
-  /** useNavigate HOOK TO GO ONE STEP BACK FROM CURRENT PAGE
-   * ! here we will be applying a special condtion that when the user clicks the back button on the form
-   * he will go back in the browser history
-   * so in onClick btn in navigation function we just need to define
-   * the nummber of steps that we want to go back in the browsers history
-   * well here we will be using -1 which means we need to navigate back 1 step
-   */
-  const navigate = useNavigate();
-
   const [cityName, setCityName] = useState('');
   const [country, setCountry] = useState('');
   const [date, setDate] = useState(new Date());
@@ -61,15 +52,7 @@ function Form() {
 
       <div className={styles.buttons}>
         <Button type='primary'>Add</Button>
-        <Button
-          onClick={(e) => {
-            e.preventDefault();
-            navigate(-1);
-          }}
-          type='back'
-        >
-          &larr; Back
-        </Button>
+        <BackButton />
       </div>
     </form>
   );
