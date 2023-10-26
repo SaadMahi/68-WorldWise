@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './CityItem.module.css';
 import { Link } from 'react-router-dom';
+import { useCities } from '../../contexts/CitiesContext';
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en', {
@@ -11,11 +12,14 @@ const formatDate = (date) =>
 
 const CityItem = ({ city }) => {
   // //console.log(city);
+  const { currentCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
   return (
     <ul>
       <Link
-        className={styles.cityItem}
+        className={`${styles.cityItem} ${
+          id === currentCity.id ? styles['cityItem--active'] : ''
+        }`}
         /** QUERY STRING
          * ! now we have both lng and lat in the globally accessible URL if you check
          * * remeber this is a query string
