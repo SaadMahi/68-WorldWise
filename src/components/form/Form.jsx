@@ -66,6 +66,19 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!cityName || !date) return;
+
+    const newCity = {
+      cityName,
+      country,
+      emoji,
+      date,
+      notes,
+      position: { lat, lng },
+    };
+
+    console.log(newCity);
   }
 
   if (isLoadingGeolocation) return <Spinner />;
@@ -95,6 +108,7 @@ function Form() {
           value={date}
         /> */}
         <DatePicker
+          id='date'
           onChange={(date) => setDate(date)}
           selected={date}
           dateFormat='dd/MM/yyyy'
