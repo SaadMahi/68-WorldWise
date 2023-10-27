@@ -59,6 +59,90 @@
         "lng": 72.877426
       },
       "id": 94443957
+    },
+    {
+      "cityName": "Crozant",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-27T18:34:11.000Z",
+      "notes": "hii",
+      "position": {
+        "lat": "46.37725420510028",
+        "lng": "1.5820312500000002"
+      },
+      "id": 98999198
+    },
+    {
+      "cityName": "la Massana",
+      "country": "Andorra",
+      "emoji": "🇦🇩",
+      "date": "2023-10-27T18:36:45.210Z",
+      "notes": "test",
+      "position": {
+        "lat": "42.52069952914966",
+        "lng": "1.483154296875"
+      },
+      "id": 98999199
+    },
+    {
+      "cityName": "Ludiente",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-10-27T18:37:53.023Z",
+      "notes": "scas",
+      "position": {
+        "lat": "40.08857859823707",
+        "lng": "-0.37696838378906256"
+      },
+      "id": 98999200
+    },
+    {
+      "cityName": "Visiedo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-10-27T18:40:25.497Z",
+      "notes": "",
+      "position": {
+        "lat": "40.6785551093992",
+        "lng": "-1.0766601562500002"
+      },
+      "id": 98999201
+    },
+    {
+      "cityName": "Chichaoua",
+      "country": "Morocco",
+      "emoji": "🇲🇦",
+      "date": "2023-10-27T18:44:47.696Z",
+      "notes": "dcs",
+      "position": {
+        "lat": "31.42866311735861",
+        "lng": "-9.052734375000002"
+      },
+      "id": 98999202
+    },
+    {
+      "cityName": "Tchirozerine",
+      "country": "Niger (the)",
+      "emoji": "🇳🇪",
+      "date": "2023-10-27T18:45:03.564Z",
+      "notes": "vev",
+      "position": {
+        "lat": "17.895114303749143",
+        "lng": "9.316406250000002"
+      },
+      "id": 98999203
+    },
+    {
+      "cityName": "Avanos",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-10-27T18:45:17.324Z",
+      "notes": "wev",
+      "position": {
+        "lat": "38.89103282648846",
+        "lng": "34.82666015625001"
+      },
+      "id": 98999204
     }
   ]
 }
