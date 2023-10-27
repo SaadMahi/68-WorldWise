@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styles from './map.module.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvents,
+} from 'react-leaflet';
 import { useCities } from '../../contexts/CitiesContext';
 
 const Map = () => {
@@ -16,24 +23,6 @@ const Map = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const mapLat = searchParams.get('lat');
   const mapLng = searchParams.get('lng');
-
-  /** useNavigate HOOK, USED FOR PROGRAMMATIC NAVIGATION
-   * given by react-router dom
-   * it returns a function called navigate
-   * we can use this function to basically move to any url
-   * we can set in anywhere on form submit btn or a map page
-   * and if user clicks we can send user to the desired url we want
-   * in other words we can display the desired component
-   *
-   * here we have set i in a condition that when user clicks the map section
-   * form component will get displayed on the left side, means user will go to form url
-   *
-   * ! this method is known as programmatic navigation
-   * * because it allows us to move to the form without us to having to click on any link
-   *
-   * ! other methods we use to navigate pages by clicking links are know as DECLARATIVE WAY
-   */
-  const navigate = useNavigate();
 
   // map position
   const [mapPosition, setMapPosition] = useState([40, 0]);
@@ -72,6 +61,7 @@ const Map = () => {
         ))}
 
         <ChangeCenter position={mapPosition} />
+        <DetectClick />
       </MapContainer>
     </div>
   );
@@ -81,6 +71,30 @@ function ChangeCenter({ position }) {
   const map = useMap();
   map.setView(position);
   return null;
+}
+
+function DetectClick() {
+  /** useNavigate HOOK, USED FOR PROGRAMMATIC NAVIGATION
+   * given by react-router dom
+   * it returns a function called navigate
+   * we can use this function to basically move to any url
+   * we can set in anywhere on form submit btn or a map page
+   * and if user clicks we can send user to the desired url we want
+   * in other words we can display the desired component
+   *
+   * here we have set i in a condition that when user clicks the map section
+   * form component will get displayed on the left side, means user will go to form url
+   *
+   * ! this method is known as programmatic navigation
+   * * because it allows us to move to the form without us to having to click on any link
+   *
+   * ! other methods we use to navigate pages by clicking links are know as DECLARATIVE WAY
+   */
+  const navigate = useNavigate();
+
+  useMapEvents({
+    click: (e) => navigate(`form`),
+  });
 }
 
 export default Map;
