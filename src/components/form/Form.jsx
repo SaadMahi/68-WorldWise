@@ -9,6 +9,9 @@ import { useUrlPosition } from '../../hooks/useUrlPosition';
 import Message from '../message/Message';
 import Spinner from '../spinner/Spinner';
 
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()
@@ -61,12 +64,19 @@ function Form() {
     [lat, lng]
   );
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   if (isLoadingGeolocation) return <Spinner />;
+
+  if (!lat && !lng)
+    return <Message message='start by clicking somewhere on the map 🗺' />;
 
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor='cityName'>City name</label>
         <input
@@ -79,11 +89,12 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor='date'>When did you go to {cityName}?</label>
-        <input
+        {/*     <input
           id='date'
           onChange={(e) => setDate(e.target.value)}
           value={date}
-        />
+        /> */}
+        <DatePicker />
       </div>
 
       <div className={styles.row}>
