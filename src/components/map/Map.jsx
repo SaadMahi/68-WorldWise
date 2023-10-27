@@ -11,20 +11,11 @@ import {
 } from 'react-leaflet';
 import { useCities } from '../../contexts/CitiesContext';
 import { useGeolocation } from '../../hooks/useGeoLocation';
+import { useUrlPosition } from '../../hooks/useUrlPosition';
 import Button from '../button/Button';
 
 const Map = () => {
-  /** useSearchParams HOOK
-   * useSearch param is a hook given by the react router
-   * it is similar to useState hook
-   * it returns an array which has the current state, second is to set param
-   *
-   * next to store or get lat and lng which is in url we use:
-   * the get method on this searchParam object and use the name of the variable
-   */
-  const [searchParams, setSearchParams] = useSearchParams();
-  const mapLat = searchParams.get('lat');
-  const mapLng = searchParams.get('lng');
+  const [mapLat, mapLng] = useUrlPosition();
 
   const {
     isLoading: isLoadingPosition,
