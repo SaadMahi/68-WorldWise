@@ -92,9 +92,10 @@ function DetectClick() {
    */
   const navigate = useNavigate();
 
+  // useMap event from leaf let library
   useMapEvents({
     click: (e) => {
-      navigate(`form`), console.log(e);
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`), console.log(e);
     },
   });
 }
