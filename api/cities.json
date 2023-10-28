@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -61,30 +49,6 @@
       "id": 94443957
     },
     {
-      "cityName": "Crozant",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2023-10-27T18:34:11.000Z",
-      "notes": "hii",
-      "position": {
-        "lat": "46.37725420510028",
-        "lng": "1.5820312500000002"
-      },
-      "id": 98999198
-    },
-    {
-      "cityName": "la Massana",
-      "country": "Andorra",
-      "emoji": "🇦🇩",
-      "date": "2023-10-27T18:36:45.210Z",
-      "notes": "test",
-      "position": {
-        "lat": "42.52069952914966",
-        "lng": "1.483154296875"
-      },
-      "id": 98999199
-    },
-    {
       "cityName": "Ludiente",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -95,6 +59,18 @@
         "lng": "-0.37696838378906256"
       },
       "id": 98999200
+    },
+    {
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-10-28T15:56:00.942Z",
+      "notes": "tst",
+      "position": {
+        "lat": "39.984091590497",
+        "lng": "-0.04051208496093751"
+      },
+      "id": 98999201
     }
   ]
 }
