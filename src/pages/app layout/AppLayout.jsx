@@ -1,7 +1,7 @@
 import React from 'react';
 import SideBar from '../../components/side-bar/SideBar';
 import styles from './AppLayout.module.css';
-import Map from '../../components/map/map';
+import Map from '../../components/map/Map';
 import User from '../../components/user/User';
 
 const AppLayout = () => {
