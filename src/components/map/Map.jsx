@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './map.module.css';
+import styles from './Map.module.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
   MapContainer,
